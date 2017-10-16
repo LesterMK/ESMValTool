@@ -1,4 +1,5 @@
 <namelist>
+  <include href="./config_private_DLR-DKRZ.xml" />
 <namelist_summary>
 ###############################################################################
 namelist_DiurnalCycle_box_SFCflux.xml
@@ -352,4 +353,7 @@ This namelist is part of the ESMValTool
     <model id="ceres">CMIP5 CERES-SYN1deg 3hr observation r1i1p1 2004 2004 @{OBSPATH}/Tier3/CERES-SYN1deg</model>
 </diag>
 </DIAGNOSTICS>
-<include href="./config_private_DLR-DKRZ.xml" /><ESGF><config_file>./esgf_config.xml</config_file></ESGF></namelist>
+<ESGF>
+  <config_file>./esgf_config.xml</config_file>
+</ESGF>
+</namelist>

@@ -35,7 +35,7 @@ This namelist is part of the ESMValTool
   <max_data_blocksize type="integer">        500         </max_data_blocksize>
   <verbosity type="integer">                  1         </verbosity>
   <exit_on_warning type="boolean">        False         </exit_on_warning>
-  
+
   <output_file_type>                          ps         </output_file_type>
   <force_calc type="boolean">              False         </force_calc>
   <force_gradecalc type="boolean">         False         </force_gradecalc>
@@ -44,10 +44,7 @@ This namelist is part of the ESMValTool
 </GLOBAL>
 
 <MODELS>
-    <model> EMAC   EVAL2      1  1999 2009  @{MODELPATH}/EMAC/EVAL2/     </model>
-    <model> EMAC   QCTM       1  1999 2007  @{MODELPATH}/EMAC/QCTM/      </model>
-    <model> EMAC   TS2000     1  2001 2010  @{MODELPATH}/EMAC/TS2000/    </model>
-    <model> EMAC   ACCMIP     1  2001 2010  @{MODELPATH}/EMAC/ACCMIP/    </model>
+  <model>ESGF_CMIP5 MPI-ESM-LR output1 MPI-M MPI-ESM-LR historical mon atmos Amon r1i1p1 latest 2000 2001 CMIP5_template</model>
 </MODELS>
 
 <DIAGNOSTICS>
@@ -117,7 +114,7 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_cycle_monthlyclim_30_SHExt.ncl">   perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_cycle_monthlyclim_5_SHExt.ncl">    perfmetrics_main.ncl </diag_script>
 
-  <tags> R_atmos, T_atmDyn </tags>  
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -150,7 +147,7 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_cycle_monthlyclim_30_SHExt.ncl">   perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_cycle_monthlyclim_5_SHExt.ncl">    perfmetrics_main.ncl </diag_script>
 
-  <tags> R_atmos, T_atmDyn </tags> 
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -183,7 +180,7 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_cycle_monthlyclim_30_SHExt.ncl">   perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_cycle_monthlyclim_5_SHExt.ncl">    perfmetrics_main.ncl </diag_script>
 
-  <tags> R_atmos, T_phys </tags>   
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -216,7 +213,7 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_cycle_monthlyclim_30_SHExt.ncl">   perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_cycle_monthlyclim_5_SHExt.ncl">    perfmetrics_main.ncl </diag_script>
 
-  <tags> R_atmos, T_phys </tags>   
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 
@@ -231,25 +228,9 @@ This namelist is part of the ESMValTool
   <model> OBS 	ERA-Interim reanaly     1           1996  2005 	@{OBSPATH}/Tier3/ERA-Interim </model>
 
   <diag_script cfg="cfg_perfmetrics_cycle_monthlyclim_100_trop.ncl">   perfmetrics_main.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
-
-<diag>
-  <description> Water vapour                         </description>
-  <variable_def_dir>    ./variable_defs/             </variable_def_dir>
-  <variable ref_model="HALOE">  vmrh2o               </variable>
-  <field_type>          T3M                          </field_type>
-  <diag_script_cfg_dir> ./nml/cfg_righi15gmd/ECVs/   </diag_script_cfg_dir>
-
-  <model> OBS 	HALOE       sat         1           1991  2002 	@{OBSPATH}/Tier2/HALOE       </model>
-
-  <diag_script cfg="cfg_perfmetrics_cycle_monthlyclim_200_SHExt.ncl">  perfmetrics_main.ncl </diag_script>
-  <diag_script cfg="cfg_perfmetrics_cycle_monthlyclim_100_trop.ncl">   perfmetrics_main.ncl </diag_script>
-  
-  <tags> R_atmosChem, T_atmChem </tags> 
-</diag>
-
 
 
 <diag>
@@ -268,7 +249,7 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_zonal_JJA_all_glob.ncl">        perfmetrics_main.ncl  </diag_script>
   <diag_script cfg="cfg_perfmetrics_zonal_SON_all_glob.ncl">        perfmetrics_main.ncl  </diag_script>
 
-  <tags> R_atmos, T_atmDyn </tags>   
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -283,8 +264,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_zonal_DJF_all_glob.ncl">        perfmetrics_main.ncl  </diag_script>
   <diag_script cfg="cfg_perfmetrics_zonal_JJA_all_glob.ncl">        perfmetrics_main.ncl  </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -298,8 +279,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_zonal_annualclim_all_glob.ncl"> perfmetrics_main.ncl  </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -313,8 +294,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_zonal_annualclim_all_glob.ncl"> perfmetrics_main.ncl  </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -328,8 +309,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	ERA-Interim reanaly     1           1996  2005 	@{OBSPATH}/Tier3/ERA-Interim </model>
 
   <diag_script cfg="cfg_perfmetrics_zonal_annualclim_all_glob.ncl"> perfmetrics_main.ncl  </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 
@@ -345,8 +326,8 @@ This namelist is part of the ESMValTool
   <model>  obs4mips    CERES-EBAF L3B   Ed2-7       2001  2012  @{OBSPATH}/Tier1          </model>
 
   <diag_script cfg="cfg_perfmetrics_latlon_annualclim_all_glob.ncl"> perfmetrics_main.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -360,8 +341,8 @@ This namelist is part of the ESMValTool
   <model>  obs4mips    CERES-EBAF L3B   Ed2-7       2001  2012  @{OBSPATH}/Tier1          </model>
 
   <diag_script cfg="cfg_perfmetrics_latlon_annualclim_all_glob.ncl"> perfmetrics_main.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -375,8 +356,8 @@ This namelist is part of the ESMValTool
   <model>  obs4mips    CERES-EBAF L3B   Ed2-7       2001  2012  @{OBSPATH}/Tier1          </model>
 
   <diag_script cfg="cfg_perfmetrics_latlon_annualclim_all_glob.ncl"> perfmetrics_main.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -389,8 +370,8 @@ This namelist is part of the ESMValTool
   <model>  obs4mips    MODIS  L3    C5          2001  2010  @{OBSPATH}/Tier1          </model>
 
   <diag_script cfg="cfg_perfmetrics_latlon_annualclim_all_glob.ncl"> perfmetrics_main.ncl </diag_script>
-  
-  <tags> R_atmos, T_clouds </tags> 
+
+  <tags> R_atmos, T_clouds </tags>
 </diag>
 
 
@@ -423,8 +404,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_200_glob.ncl">  perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_glob.ncl">   perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_glob.ncl">    perfmetrics_taylor.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -438,8 +419,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_taylor_collect.ncl">  perfmetrics_taylor_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -466,8 +447,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_200_glob.ncl">  perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_glob.ncl">   perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_glob.ncl">    perfmetrics_taylor.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -481,8 +462,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_taylor_collect.ncl">  perfmetrics_taylor_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -504,8 +485,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_200_glob.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_glob.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_glob.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -527,8 +508,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_500_glob.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_glob.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_glob.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -550,8 +531,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_400_glob.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_glob.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_glob.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -566,8 +547,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_glob.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_glob.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -582,8 +563,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_glob.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_glob.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -598,8 +579,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_glob.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_glob.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -613,8 +594,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_collect.ncl">  perfmetrics_grading_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn, T_phys </tags> 
+
+  <tags> R_atmos, T_atmDyn, T_phys </tags>
 </diag>
 
 
@@ -643,8 +624,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_200_trop.ncl">  perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_trop.ncl">   perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_trop.ncl">    perfmetrics_taylor.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -658,8 +639,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_taylor_collect.ncl">  perfmetrics_taylor_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -686,8 +667,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_200_trop.ncl">  perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_trop.ncl">   perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_trop.ncl">    perfmetrics_taylor.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -701,8 +682,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_taylor_collect.ncl">  perfmetrics_taylor_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -724,8 +705,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_200_trop.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_trop.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_trop.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -747,8 +728,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_500_trop.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_trop.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_trop.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -770,8 +751,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_400_trop.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_trop.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_trop.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -786,8 +767,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_trop.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_trop.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -802,8 +783,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_trop.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_trop.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -818,8 +799,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_trop.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_trop.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -833,8 +814,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_collect.ncl">  perfmetrics_grading_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn, T_phys </tags> 
+
+  <tags> R_atmos, T_atmDyn, T_phys </tags>
 </diag>
 
 
@@ -863,8 +844,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_200_NHExt.ncl">  perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_NHExt.ncl">   perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_NHExt.ncl">    perfmetrics_taylor.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -878,8 +859,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_taylor_collect.ncl">  perfmetrics_taylor_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -906,8 +887,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_200_NHExt.ncl">  perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_NHExt.ncl">   perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_NHExt.ncl">    perfmetrics_taylor.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -921,8 +902,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_taylor_collect.ncl">  perfmetrics_taylor_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -944,8 +925,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_200_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_NHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_NHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -967,8 +948,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_500_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_NHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_NHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -990,8 +971,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_400_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_NHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_NHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1006,8 +987,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_NHExt.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1022,8 +1003,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_NHExt.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1038,8 +1019,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_NHExt.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1053,8 +1034,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_collect.ncl">  perfmetrics_grading_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn, T_phys </tags> 
+
+  <tags> R_atmos, T_atmDyn, T_phys </tags>
 </diag>
 
 
@@ -1083,8 +1064,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_200_SHExt.ncl">  perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_SHExt.ncl">   perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_SHExt.ncl">    perfmetrics_taylor.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1098,8 +1079,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_taylor_collect.ncl">  perfmetrics_taylor_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1126,8 +1107,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_200_SHExt.ncl">  perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_SHExt.ncl">   perfmetrics_taylor.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_SHExt.ncl">    perfmetrics_taylor.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -1141,8 +1122,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_taylor_collect.ncl">  perfmetrics_taylor_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -1164,8 +1145,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_200_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_SHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_SHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -1187,8 +1168,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_500_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_SHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_SHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1210,8 +1191,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_400_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_30_SHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_5_SHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1226,8 +1207,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_SHExt.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1242,8 +1223,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_SHExt.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1258,8 +1239,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_SHExt.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_all_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1273,8 +1254,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_grading_RMSD_collect.ncl">  perfmetrics_grading_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn, T_phys </tags> 
+
+  <tags> R_atmos, T_atmDyn, T_phys </tags>
 </diag>
 
 
@@ -1298,8 +1279,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_200_glob.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_glob.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_glob.ncl">    perfmetrics_grading.ncl </diag_script>#
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1321,8 +1302,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_200_glob.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_glob.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_glob.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -1344,8 +1325,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_200_glob.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_glob.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_glob.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -1367,8 +1348,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_500_glob.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_glob.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_glob.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1390,8 +1371,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_400_glob.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_glob.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_glob.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1406,8 +1387,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_glob.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_glob.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1422,8 +1403,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_glob.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_glob.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1438,8 +1419,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_glob.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_glob.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1453,8 +1434,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_collect.ncl">  perfmetrics_grading_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn, T_phys </tags> 
+
+  <tags> R_atmos, T_atmDyn, T_phys </tags>
 </diag>
 
 
@@ -1478,8 +1459,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_200_trop.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_trop.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_trop.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1501,8 +1482,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_200_trop.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_trop.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_trop.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -1524,8 +1505,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_200_trop.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_trop.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_trop.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -1547,8 +1528,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_500_trop.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_trop.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_trop.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1570,8 +1551,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_400_trop.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_trop.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_trop.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1586,8 +1567,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_trop.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_trop.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1602,8 +1583,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_trop.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_trop.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1618,8 +1599,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_trop.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_trop.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1633,8 +1614,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_collect.ncl">  perfmetrics_grading_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn, T_phys </tags> 
+
+  <tags> R_atmos, T_atmDyn, T_phys </tags>
 </diag>
 
 
@@ -1658,8 +1639,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_200_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_NHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_NHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1681,8 +1662,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_200_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_NHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_NHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -1704,8 +1685,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_200_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_NHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_NHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -1727,8 +1708,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_500_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_NHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_NHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1750,8 +1731,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_400_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_NHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_NHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1766,8 +1747,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_NHExt.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1782,8 +1763,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_NHExt.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1798,8 +1779,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_NHExt.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_NHExt.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1813,8 +1794,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_collect.ncl">  perfmetrics_grading_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn, T_phys </tags> 
+
+  <tags> R_atmos, T_atmDyn, T_phys </tags>
 </diag>
 
 
@@ -1838,8 +1819,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_200_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_SHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_SHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1861,8 +1842,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_200_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_SHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_SHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -1884,8 +1865,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_200_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_SHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_SHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn </tags> 
+
+  <tags> R_atmos, T_atmDyn </tags>
 </diag>
 
 <diag>
@@ -1907,8 +1888,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_500_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_SHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_SHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1930,8 +1911,8 @@ This namelist is part of the ESMValTool
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_400_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_30_SHExt.ncl">   perfmetrics_grading.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_5_SHExt.ncl">    perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1946,8 +1927,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_SHExt.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1962,8 +1943,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_SHExt.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1978,8 +1959,8 @@ This namelist is part of the ESMValTool
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_SHExt.ncl">  perfmetrics_main.ncl </diag_script>
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_all_SHExt.ncl">  perfmetrics_grading.ncl </diag_script>
-  
-  <tags> R_atmos, T_phys </tags> 
+
+  <tags> R_atmos, T_phys </tags>
 </diag>
 
 <diag>
@@ -1993,8 +1974,8 @@ This namelist is part of the ESMValTool
   <model> OBS 	NCEP        reanaly 	1	    1996  2005 	@{OBSPATH}/Tier2/NCEP        </model>
 
   <diag_script cfg="cfg_perfmetrics_grading_BIAS_collect.ncl">  perfmetrics_grading_collect.ncl </diag_script>
-  
-  <tags> R_atmos, T_atmDyn, T_phys </tags> 
+
+  <tags> R_atmos, T_atmDyn, T_phys </tags>
 </diag>
 
 </DIAGNOSTICS>

@@ -15,6 +15,9 @@ Authors
 Irene Cionni (ENEA, Italy - irene.cionni@enea.it)
 Veronika Eyring (DLR, Germany - veronika.eyring@dlr.de)
 
+Contributor(s)
+n/a
+
 Project
 ESMVal
 
@@ -39,7 +42,7 @@ This namelist is part of the ESMValTool
   <max_data_blocksize type="integer">     500           </max_data_blocksize>
   <verbosity type="integer">             1             </verbosity>
   <exit_on_warning type="boolean">       False         </exit_on_warning>
-  <output_file_type>                        png         </output_file_type>
+  <output_file_type>                         ps         </output_file_type>
   <force_calc type="boolean">             False         </force_calc>
   <force_gradecalc type="boolean">        False         </force_gradecalc>
   <force_taylorcalc type="boolean">       False         </force_taylorcalc>
@@ -69,12 +72,12 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 bcc-csm1-1-m output1 BCC bcc-csm1-1-m historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CanESM2 output1 CCCma CanESM2 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 historical mon atmos Amon r1i1p1 v20121031 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CESM1-FASTCHEM output1 NSF-DOE-NCAR CESM1-FASTCHEM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CESM1-WACCM output1 NSF-DOE-NCAR CESM1-WACCM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CNRM-CM5 output1 CNRM-CERFACS CNRM-CM5 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
-         <model>ESGF_CMIP5 CSIRO-Mk3-6-0 output1 CSIRO-QCCCE CSIRO-Mk3-6-0 historical mon atmos Amon r1i1p1 v1 1979 2005 CMIP5_template</model>
-         <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 historical mon atmos Amon r1i1p1 v1 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 CSIRO-Mk3-6-0 output1 CSIRO-QCCCE CSIRO-Mk3-6-0 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
@@ -86,7 +89,7 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 IPSL-CM5A-LR output1 IPSL IPSL-CM5A-LR historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 IPSL-CM5A-MR output1 IPSL IPSL-CM5A-MR historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 IPSL-CM5B-LR output1 IPSL IPSL-CM5B-LR historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
-         <model>ESGF_CMIP5 MIROC4h output1 MIROC MIROC4h historical mon atmos Amon r1i1p1 v20120628 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 MIROC4h output1 MIROC MIROC4h historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC5 output1 MIROC MIROC5 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM output1 MIROC MIROC-ESM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM-CHEM output1 MIROC MIROC-ESM-CHEM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
@@ -94,9 +97,11 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 MPI-ESM-LR output1 MPI-M MPI-ESM-LR historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 MPI-ESM-P output1 MPI-M MPI-ESM-P historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 MRI-ESM1 output1 MRI MRI-ESM1 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 bcc-csm1-1 output1 BCC bcc-csm1-1 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp26 mon atmos Amon r1i1p1 v20121031 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
@@ -105,17 +110,22 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 IPSL-CM5A-LR output1 IPSL IPSL-CM5A-LR rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 IPSL-CM5A-MR output1 IPSL IPSL-CM5A-MR rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM-CHEM output1 MIROC MIROC-ESM-CHEM rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 bcc-csm1-1 output1 BCC bcc-csm1-1 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp45 mon atmos Amon r1i1p1 v20121031 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CESM1-WACCM output1 NSF-DOE-NCAR CESM1-WACCM rcp45 mon atmos Amon r2i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 CNRM-CM5 output1 CNRM-CERFACS CNRM-CM5 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 IPSL-CM5A-LR output1 IPSL IPSL-CM5A-LR rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 IPSL-CM5A-MR output1 IPSL IPSL-CM5A-MR rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM-CHEM output1 MIROC MIROC-ESM-CHEM rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp60 mon atmos Amon r1i1p1 v20130312 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 bcc-csm1-1 output1 BCC bcc-csm1-1 rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
@@ -124,9 +134,10 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 IPSL-CM5A-LR output1 IPSL IPSL-CM5A-LR rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM-CHEM output1 MIROC MIROC-ESM-CHEM rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp85 mon atmos Amon r1i1p1 v20130219 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 CNRM-CM5 output1 CNRM-CERFACS CNRM-CM5 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
@@ -152,12 +163,12 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 bcc-csm1-1-m output1 BCC bcc-csm1-1-m historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CanESM2 output1 CCCma CanESM2 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 historical mon atmos Amon r1i1p1 v20121031 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CESM1-FASTCHEM output1 NSF-DOE-NCAR CESM1-FASTCHEM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CESM1-WACCM output1 NSF-DOE-NCAR CESM1-WACCM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CNRM-CM5 output1 CNRM-CERFACS CNRM-CM5 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
-         <model>ESGF_CMIP5 CSIRO-Mk3-6-0 output1 CSIRO-QCCCE CSIRO-Mk3-6-0 historical mon atmos Amon r1i1p1 v1 1979 2005 CMIP5_template</model>
-         <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 historical mon atmos Amon r1i1p1 v1 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 CSIRO-Mk3-6-0 output1 CSIRO-QCCCE CSIRO-Mk3-6-0 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
@@ -177,9 +188,11 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 MPI-ESM-LR output1 MPI-M MPI-ESM-LR historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 MPI-ESM-P output1 MPI-M MPI-ESM-P historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 MRI-ESM1 output1 MRI MRI-ESM1 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 bcc-csm1-1 output1 BCC bcc-csm1-1 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp26 mon atmos Amon r1i1p1 v20121031 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
@@ -188,17 +201,22 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 IPSL-CM5A-LR output1 IPSL IPSL-CM5A-LR rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 IPSL-CM5A-MR output1 IPSL IPSL-CM5A-MR rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM-CHEM output1 MIROC MIROC-ESM-CHEM rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 bcc-csm1-1 output1 BCC bcc-csm1-1 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp45 mon atmos Amon r1i1p1 v20121031 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CESM1-WACCM output1 NSF-DOE-NCAR CESM1-WACCM rcp45 mon atmos Amon r2i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 CNRM-CM5 output1 CNRM-CERFACS CNRM-CM5 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 IPSL-CM5A-LR output1 IPSL IPSL-CM5A-LR rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 IPSL-CM5A-MR output1 IPSL IPSL-CM5A-MR rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM-CHEM output1 MIROC MIROC-ESM-CHEM rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp60 mon atmos Amon r1i1p1 v20130312 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 bcc-csm1-1 output1 BCC bcc-csm1-1 rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
@@ -207,9 +225,10 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 IPSL-CM5A-LR output1 IPSL IPSL-CM5A-LR rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM-CHEM output1 MIROC MIROC-ESM-CHEM rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp85 mon atmos Amon r1i1p1 v20130219 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 CNRM-CM5 output1 CNRM-CERFACS CNRM-CM5 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
@@ -235,12 +254,12 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 bcc-csm1-1-m output1 BCC bcc-csm1-1-m historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CanESM2 output1 CCCma CanESM2 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 historical mon atmos Amon r1i1p1 v20121031 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CESM1-FASTCHEM output1 NSF-DOE-NCAR CESM1-FASTCHEM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CESM1-WACCM output1 NSF-DOE-NCAR CESM1-WACCM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CNRM-CM5 output1 CNRM-CERFACS CNRM-CM5 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
-         <model>ESGF_CMIP5 CSIRO-Mk3-6-0 output1 CSIRO-QCCCE CSIRO-Mk3-6-0 historical mon atmos Amon r1i1p1 v1 1979 2005 CMIP5_template</model>
-         <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 historical mon atmos Amon r1i1p1 v1 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 CSIRO-Mk3-6-0 output1 CSIRO-QCCCE CSIRO-Mk3-6-0 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
@@ -260,9 +279,11 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 MPI-ESM-LR output1 MPI-M MPI-ESM-LR historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 MPI-ESM-P output1 MPI-M MPI-ESM-P historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 MRI-ESM1 output1 MRI MRI-ESM1 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 bcc-csm1-1 output1 BCC bcc-csm1-1 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp26 mon atmos Amon r1i1p1 v20121031 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
@@ -271,10 +292,13 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 IPSL-CM5A-LR output1 IPSL IPSL-CM5A-LR rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 IPSL-CM5A-MR output1 IPSL IPSL-CM5A-MR rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM-CHEM output1 MIROC MIROC-ESM-CHEM rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 bcc-csm1-1 output1 BCC bcc-csm1-1 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp45 mon atmos Amon r1i1p1 v20121031 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CESM1-WACCM output1 NSF-DOE-NCAR CESM1-WACCM rcp45 mon atmos Amon r2i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 CNRM-CM5 output1 CNRM-CERFACS CNRM-CM5 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
@@ -282,7 +306,8 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 IPSL-CM5A-MR output1 IPSL IPSL-CM5A-MR rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM-CHEM output1 MIROC MIROC-ESM-CHEM rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 bcc-csm1-1 output1 BCC bcc-csm1-1 rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp60 mon atmos Amon r1i1p1 v20130312 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
@@ -291,9 +316,10 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 IPSL-CM5A-LR output1 IPSL IPSL-CM5A-LR rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM-CHEM output1 MIROC MIROC-ESM-CHEM rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp85 mon atmos Amon r1i1p1 v20130219 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 CNRM-CM5 output1 CNRM-CERFACS CNRM-CM5 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
@@ -319,12 +345,12 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 bcc-csm1-1-m output1 BCC bcc-csm1-1-m historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CanESM2 output1 CCCma CanESM2 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 historical mon atmos Amon r1i1p1 v20121031 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CESM1-FASTCHEM output1 NSF-DOE-NCAR CESM1-FASTCHEM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CESM1-WACCM output1 NSF-DOE-NCAR CESM1-WACCM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 CNRM-CM5 output1 CNRM-CERFACS CNRM-CM5 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
-         <model>ESGF_CMIP5 CSIRO-Mk3-6-0 output1 CSIRO-QCCCE CSIRO-Mk3-6-0 historical mon atmos Amon r1i1p1 v1 1979 2005 CMIP5_template</model>
-         <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 historical mon atmos Amon r1i1p1 v1 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 CSIRO-Mk3-6-0 output1 CSIRO-QCCCE CSIRO-Mk3-6-0 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
@@ -344,9 +370,11 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 MPI-ESM-LR output1 MPI-M MPI-ESM-LR historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 MPI-ESM-P output1 MPI-M MPI-ESM-P historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
          <model>ESGF_CMIP5 MRI-ESM1 output1 MRI MRI-ESM1 historical mon atmos Amon r1i1p1 latest 1979 2005 CMIP5_template</model>
+         <model>ESGF_CMIP5 bcc-csm1-1 output1 BCC bcc-csm1-1 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp26 mon atmos Amon r1i1p1 v20121031 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
@@ -355,10 +383,13 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 IPSL-CM5A-LR output1 IPSL IPSL-CM5A-LR rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 IPSL-CM5A-MR output1 IPSL IPSL-CM5A-MR rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM-CHEM output1 MIROC MIROC-ESM-CHEM rcp26 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 bcc-csm1-1 output1 BCC bcc-csm1-1 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp45 mon atmos Amon r1i1p1 v20121031 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CESM1-WACCM output1 NSF-DOE-NCAR CESM1-WACCM rcp45 mon atmos Amon r2i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 CNRM-CM5 output1 CNRM-CERFACS CNRM-CM5 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
@@ -366,7 +397,8 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 IPSL-CM5A-MR output1 IPSL IPSL-CM5A-MR rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM-CHEM output1 MIROC MIROC-ESM-CHEM rcp45 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 bcc-csm1-1 output1 BCC bcc-csm1-1 rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp60 mon atmos Amon r1i1p1 v20130312 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
@@ -375,9 +407,10 @@ This namelist is part of the ESMValTool
          <model>ESGF_CMIP5 IPSL-CM5A-LR output1 IPSL IPSL-CM5A-LR rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 MIROC-ESM-CHEM output1 MIROC MIROC-ESM-CHEM rcp60 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 BNU-ESM output1 BNU BNU-ESM rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
-         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp85 mon atmos Amon r1i1p1 v20130219 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 CCSM4 output1 NCAR CCSM4 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 CNRM-CM5 output1 CNRM-CERFACS CNRM-CM5 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 FGOALS-g2 output1 LASG-CESS FGOALS-g2 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
+         <model>ESGF_CMIP5 FIO-ESM output1 FIO FIO-ESM rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-CM3 output1 NOAA-GFDL GFDL-CM3 rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2G output1 NOAA-GFDL GFDL-ESM2G rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
          <model>ESGF_CMIP5 GFDL-ESM2M output1 NOAA-GFDL GFDL-ESM2M rcp85 mon atmos Amon r1i1p1 latest 2006 2050 CMIP5_template</model>
