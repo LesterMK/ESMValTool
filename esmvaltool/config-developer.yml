@@ -24,6 +24,7 @@ CMIP5:
     DKRZ: '[institute]/[model]/[exp]/[realm]/[freq]/[mip]/[ensemble]/[latestversion]/[var]'
     ETHZ: '[exp]/[mip]/[var]/[model]/[ensemble]/'
     SMHI: '[model]/[ensemble]/[exp]/[freq]'
+    ESGF: '[institute]/[model]/[exp]/[freq]/[realm]/[mip]/[ensemble]/[latestversion]/[var]'
   input_file: '[var]_[mip]_[model]_[exp]_[ensemble]_*'
   output_file: '[model]_[mip]_[exp]_[ensemble]_[field]_[var]_[start_year]-[end_year]'
 
@@ -55,8 +56,8 @@ CCMVal2:
   input_dir:
     default: '[exp]/[model]'
   input_file: '[project]_[exp]_[name]_[ensemble]_[field]_[var]'
-  output_file: '[project]_[exp]_[name]_[ensemble]_[field]_[var]_[start_year]-[end_year]'    
-  
+  output_file: '[project]_[exp]_[name]_[ensemble]_[field]_[var]_[start_year]-[end_year]'
+
 EMAC:
   input_dir:
     default: '[model]'

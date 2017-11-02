@@ -135,7 +135,8 @@ def replace_tags(path, model, var):
                 elif tag == 'realm':
                     replacewith = cmip5_mip2realm_freq(model['mip'])[0]
         elif tag == 'latestversion':  # handled separately later
-            pass
+            #ugly hack: replace with itself.
+            replacewith = '[latestversion]'
         elif tag == 'tier':
             replacewith = ''.join(('Tier', str(model['tier'])))
         elif tag == 'model':
@@ -148,7 +149,10 @@ def replace_tags(path, model, var):
                     "Model key {} must be specified for project {}, check "
                     "your namelist entry".format(tag, model['project']))
 
+        logger.debug("replacing tag %s with %s in %s", tag, replacewith, path)
         path = path.replace('[' + tag + ']', replacewith)
+
+    logger.debug("resulting path %s", path)
 
     return path
 
@@ -205,6 +209,8 @@ def get_input_filelist(project_info, model, var):
     else:
         drs = 'default'
 
+    logger.debug("getting date from %s", dict['input_dir'][drs])
+
     if drs in dict['input_dir']:
         dir2 = replace_tags(dict['input_dir'][drs], model, var)
     else:
@@ -212,16 +218,21 @@ def get_input_filelist(project_info, model, var):
             'drs %s for %s project not specified in config-developer file' %
             (drs, project))
 
+
     dirname = os.path.join(dir1, dir2)
+
+    logger.debug("dirname now %s", dirname)
 
     # Find latest version if required
     if '[latestversion]' in dirname:
         part1 = dirname.split('[latestversion]')[0]
         part2 = dirname.split('[latestversion]')[1]
+        logger.debug("getting latestversion from dirname = %s, part1 = %s, part2 = %s", dirname, part1, part2)
         list_versions = os.listdir(part1)
         list_versions.sort()
         latest = os.path.basename(list_versions[-1])
-        dirname = os.path.join(part1, latest, part2)
+        logger.debug("building dirname  from  %s %s %s", part1, latest, part2)
+        dirname = part1 + latest + part2
 
     if not os.path.isdir(dirname):
         raise OSError('directory not found', dirname)
